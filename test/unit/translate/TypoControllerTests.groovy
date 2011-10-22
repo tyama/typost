@@ -23,7 +23,7 @@ class TypoControllerTests {
         params.content = 'あいおうえ'
         params.comment = 'あいおうえ'
         controller.index()
-        assert response.text == '1'
+        assert response.redirectedUrl == 'http://'
     }
 
     @Test void "List!!!"() {
