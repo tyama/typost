@@ -1,6 +1,5 @@
 package translate
 
-
 class TypoController {
 
     static defaultAction = "list"
@@ -19,4 +18,5 @@ class TypoController {
         def list = Typo.list()
         render view:'list', model:[list:list]
     }
+
 }

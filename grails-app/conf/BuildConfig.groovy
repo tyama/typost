@@ -38,11 +38,11 @@ grails.project.dependency.resolution = {
     }
 
     plugins {
-        compile ":hibernate:$grailsVersion"
         compile ":jquery:1.6.1.1"
         compile ":resources:1.1.1"
         compile ":cloud-support:1.0.5"
-
+        compile ":mongodb:1.0.0.RC1"
+        compile ":cloud-foundry:1.2"
         build ":tomcat:$grailsVersion"
     }
 }
