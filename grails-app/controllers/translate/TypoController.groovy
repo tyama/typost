@@ -15,7 +15,7 @@ class TypoController {
     }
 
     def list(){
-        def list = Typo.list()
+        def list = Typo.list([sort:'dateCreated',order:'desc'])
         render view:'list', model:[list:list]
     }
 
