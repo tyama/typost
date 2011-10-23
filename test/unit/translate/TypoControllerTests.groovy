@@ -13,17 +13,17 @@ import org.junit.*
 class TypoControllerTests {
 
     @Test void "Typo API"() {
-        params.url = 'http://'
+        params.url = 'http://example.com'
         controller.index()
         assert response.text == 'error'
     }
 
     @Test void "Typo API 2"() {
-        params.url = 'http://'
+        params.url = 'http://example.com'
         params.content = 'あいおうえ'
         params.comment = 'あいおうえ'
         controller.index()
-        assert response.text == '1'
+        assert response.redirectedUrl == 'http://example.com'
     }
 
     @Test void "List!!!"() {
